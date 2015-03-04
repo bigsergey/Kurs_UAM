@@ -6,7 +6,15 @@
 	}
 
 	mapArray = function (array, callback, ctx) {
-
+		var newArray = array.slice();
+		newArray.forEach(function(arrElement, index) {
+			if (ctx) {
+				newArray[index] = callback.apply(ctx, [arrElement, index, array]);
+			} else {
+				newArray[index] = callback(arrElement, index, array);
+			}
+		});
+		return newArray;
 	};
 
 	global.UAM.mapArray = mapArray;
