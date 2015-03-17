@@ -3,7 +3,14 @@
 		global.UAM = {};
 	}
 
-	function newObject() {}
+	function newObject() {
+		var newInstance = {};
+		var args = Array.prototype.slice.call(arguments, 1);
+		var func = arguments[0];
+		newInstance.__proto__ = (Object(func.prototype) === func.prototype ? func.prototype : Object.prototype);
+		var constructorReturns = func.apply(newInstance, args);
+		return constructorReturns instanceof Object ? constructorReturns : newInstance;
+	}
 
 	global.UAM.newObject = newObject;
 }(window));

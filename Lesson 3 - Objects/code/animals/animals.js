@@ -5,6 +5,30 @@
 		global.UAM = {};
 	}
 
+	var animal = {
+		eat: function (animal) {
+			return this.canEat(animal) ? 'Mniam!' : 'Blee!';
+		}
+	};
+
+	Cat = Object.create(animal);
+
+	Cat.canEat = function (animal) {
+		return Object.getPrototypeOf(animal) === Bird;
+	};
+
+	Bird = Object.create(animal);
+
+	Bird.canEat = function (animal) {
+		return Object.getPrototypeOf(animal) === Worm;
+	};
+
+	Worm = Object.create(animal);
+
+	Worm.canEat = function (animal) {
+		return false;
+	};
+
 	global.UAM.Cat = Cat;
 	global.UAM.Bird = Bird;
 	global.UAM.Worm = Worm;
