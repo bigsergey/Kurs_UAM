@@ -7,7 +7,7 @@
 		var newInstance = {};
 		var args = Array.prototype.slice.call(arguments, 1);
 		var func = arguments[0];
-		newInstance.__proto__ = (Object(func.prototype) === func.prototype ? func.prototype : Object.prototype);
+		newInstance = Object.create(func.prototype);
 		var constructorReturns = func.apply(newInstance, args);
 		return constructorReturns instanceof Object ? constructorReturns : newInstance;
 	}
