@@ -1,3 +1,81 @@
 .row {
     display: block;
 }
+
+.row .column {
+    width: 46%;
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    margin: 0 2%;
+}
+
+.row .column h1 {
+	margin: 0;
+	padding: 10px;
+}
+
+.row .column p {
+	margin: 0;
+	padding: 20px 40px;
+}
+
+.row .column:nth-child(odd) h1 {
+	background-color: black;
+	color: white;
+	border-radius: 15px 15px 0 0;
+}
+
+.row .column:nth-child(odd) p {
+	background-color: grey;
+	border-radius: 0 0 15px 15px;
+}
+
+.row .column:nth-child(odd) p::first-letter {
+	font-size: 30px;
+}
+
+.row .column:nth-child(even) {
+	color: white;
+	border: 4px solid black;
+	box-shadow: 9px 9px 5px grey;
+}
+
+.row .column:nth-child(even) h1 {
+	background-color: orange;
+	color: white;
+}
+
+.row .column:nth-child(even) p {
+	background-color: green;
+}
+
+.row .column:nth-child(even) p::first-line {
+	text-shadow: -2px 2px 5px white;
+	font-weight: bolder;
+}
+
+.row {
+	clear: both;
+}
+
+.row > h1 {
+	text-align: center;
+	padding-top: 50px;
+}
+
+.row > p {
+	white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.row > p:before {
+	content: '';
+	background-image: url(cat.jpg);
+	background-size: cover;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+}
