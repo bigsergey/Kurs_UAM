@@ -1,37 +1,54 @@
 <html>
-	<head>
-		<title>My first SPA question</title>
-		<script src="js/ee.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/utils.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/store.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/views/inputView.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/views/listView.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/views/footerView.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/controllers/inputCtrl.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/controllers/listCtrl.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/controllers/footerCtrl.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
-	</head>
 
-	<body>
+<head>
+    <title>My first SPA question</title>
+    <link rel="stylesheet" type="text/css" href="styles/semantic.css">
+    <script src="js/ee.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/utils.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/store.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/views/inputView.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/views/listView.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/views/footerView.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/controllers/inputCtrl.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/controllers/listCtrl.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/controllers/footerCtrl.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+</head>
 
-	<div id="inputview">
-		<input type="text" placeholder="Type new task content..." />
-		<button class="add-button">Add</button>
-	</div>
+<body>
+    <h2 class="ui center aligned header" style="margin-top: 50px;">
+  		<div class="content">
+    		Todo List
+  		</div>
+	</h2>
+    <div class="ui doubling two column centered grid">
+        <div class="row">
+            <div class="column">
+                <div id="inputview" class="ui fluid action input">
+                    <input type="text" placeholder="Type new task content..." />
+                    <div class="add-button ui button">Add</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div id="listview" class="ui divided selection list">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div id="footerview" class="row">
+                    <div class="ui black label">
+                        Number of task: <span id="numberoftask">0</span>
+                    </div>
+                    <div class="ui green label">
+                        Number of active task: <span id="numberofactivetask">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 
-	<div id="listview">
-
-	</div>
-
-	<div id="footerview" class="footer">
-		<div class="left">
-			Number of task: <span id="numberoftask">0</span>
-		</div>
-		<div class="right">
-		Number of active task: <span id="numberofactivetask">0</span>
-		</div>
-	</div>
-
-	</body>
 </html>

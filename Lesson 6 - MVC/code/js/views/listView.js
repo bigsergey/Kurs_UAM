@@ -6,10 +6,10 @@ UAM.ListView = function(element) {
     UAM.EventEmitter.call(this);
 
     this.createTaskDiv = function(id, task) {
-        var taskDiv = document.createElement('div');
+        var taskDiv = document.createElement('a');
 
         taskDiv.setAttribute('id', id);
-        taskDiv.setAttribute('class', task.isActive ? 'active' : 'inactive');
+        taskDiv.setAttribute('class', task.isActive ? 'item active' : 'item inactive');
         taskDiv.innerHTML = task.content;
 
         taskDiv.onclick = function () {
