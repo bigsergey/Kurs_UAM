@@ -18,10 +18,21 @@
         <div class="list" ng-controller="TodoCtrl">
             <input type="text" class="field" ng-model="inputValue"/><button class="submit" ng-click="addNew()">Add</button>
             <ul>
-                <li ng-repeat="element in elements"
+                <li ng-repeat="element in elements track by $index"
                 ng-class="{'inactive': element.status === false}"
-                ng-click="element.status = false">{{element.value}}</li>
+                ng-click="element.status = !element.status; updateCounter()">{{element.value}}
+                <button ng-click="remove($index)">remove</button>
+                </li>
+                <li ng-show="elements.length == 0">No any tasks!</li>
             </ul>
+            <div class="counter">
+                <div class="left">
+                    Active: {{active}}
+                </div>
+                <div class="right">
+                    Inactive: {{inactive}}
+                </div>
+            </div>
         </div>
     </body>
 </html>
