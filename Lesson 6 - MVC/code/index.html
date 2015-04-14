@@ -1,33 +1,36 @@
 <html>
 	<head>
 		<title>My first SPA question</title>
-		<script src="js/utils.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/ee.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/utils.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/store.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/baseView.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/baseCtrl.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/controllers/inputCtrl.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/controllers/listCtrl.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/controllers/footerCtrl.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/views/inputView.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/views/listView.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/views/footerView.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/controllers/inputCtrl.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/controllers/listCtrl.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/controllers/footerCtrl.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
 
 	<div id="inputview">
-		<textarea></textarea>
-		<div class="button">Add</div>
+		<input type="text" placeholder="Type new task content..." />
+		<button class="add-button">Add</button>
 	</div>
 
 	<div id="listview">
 
 	</div>
 
-	<div id="footerview">
-
+	<div id="footerview" class="footer">
+		<div class="left">
+			Number of task: <span id="numberoftask">0</span>
+		</div>
+		<div class="right">
+		Number of active task: <span id="numberofactivetask">0</span>
+		</div>
 	</div>
 
 	</body>
